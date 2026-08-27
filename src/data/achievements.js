@@ -15,6 +15,7 @@ const achievements = [
     subtitle: "AI in Malnutrition Detection",
     description:
       "Published a research paper on AI-based malnutrition detection covering modern methodologies, challenges, and future directions.",
+    link: "https://inspirajournals.com/home/viewdetails/?id=7277",
   },
 
   {

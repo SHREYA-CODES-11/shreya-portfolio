@@ -113,12 +113,12 @@ const secondRow = [
 ];
 
 function Skills() {
-      return (
+  return (
     <section
       id="skills"
-      className="min-h-screen bg-slate-950 text-white py-24 px-6"
+      className="min-h-screen bg-slate-950 text-white flex items-center py-12 sm:py-16 lg:py-20 px-4 sm:px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl w-full mx-auto">
 
         {/* Heading */}
         <motion.h2
@@ -126,19 +126,19 @@ function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-5xl font-bold text-center"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center"
         >
           My <span className="text-cyan-400">Skills</span>
         </motion.h2>
 
-        <p className="text-center text-gray-400 mt-5 max-w-3xl mx-auto leading-8">
+        <p className="text-center text-gray-400 mt-2 sm:mt-3 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
           Technologies, frameworks and tools that I use to build intelligent,
           scalable and modern software solutions.
         </p>
 
         {/* ---------------- First Row ---------------- */}
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8 mt-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mt-6 sm:mt-8">
           {firstRow.map((category, index) => (
             <motion.div
               key={category.title}
@@ -146,19 +146,19 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-2 transition-all duration-300"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-2 transition-all duration-300"
             >
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-3.5 sm:mb-4">
                 {category.title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5">
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex items-center gap-2 bg-slate-800 hover:bg-cyan-400 hover:text-black transition-all duration-300 px-4 py-2 rounded-full"
+                    className="flex items-center gap-2 bg-slate-800 hover:bg-cyan-400 hover:text-black transition-all duration-300 px-3.5 py-1.5 rounded-full"
                   >
-                    <span className="text-xl">{skill.icon}</span>
+                    <span className="text-lg">{skill.icon}</span>
 
                     <span className="text-sm font-medium">
                       {skill.name}
@@ -172,7 +172,7 @@ function Skills() {
 
         {/* ---------------- Second Row ---------------- */}
 
-        <div className="flex justify-center gap-8 flex-wrap mt-8">
+        <div className="flex justify-center gap-5 sm:gap-6 flex-wrap mt-5 sm:mt-6">
           {secondRow.map((category, index) => (
             <motion.div
               key={category.title}
@@ -180,19 +180,19 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: (index + 3) * 0.15 }}
               viewport={{ once: true }}
-              className="bg-slate-900 border border-slate-800 rounded-2xl p-7 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-2 transition-all duration-300 w-full md:w-[48%] lg:w-[32%]"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-2 transition-all duration-300 w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-3.5 sm:mb-4">
                 {category.title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5">
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className="flex items-center gap-2 bg-slate-800 hover:bg-cyan-400 hover:text-black transition-all duration-300 px-4 py-2 rounded-full"
+                    className="flex items-center gap-2 bg-slate-800 hover:bg-cyan-400 hover:text-black transition-all duration-300 px-3.5 py-1.5 rounded-full"
                   >
-                    <span className="text-xl">{skill.icon}</span>
+                    <span className="text-lg">{skill.icon}</span>
 
                     <span className="text-sm font-medium">
                       {skill.name}
